@@ -74,28 +74,5 @@ Bu döngü sayesinde LED 1 saniyede bir yanıp söner.
 
 ---
 
-## 🧪 6. Derleme ve Yükleme
 
-Terminal üzerinden aşağıdaki komutlarla projeyi derleyip karta yükleyebilirsin:
-
-```bash
-west build -b nrf52840dk_nrf52840
-west flash
-```
-
-> `-b` parametresi kullandığın board'u belirtir. Farklı bir kart kullanıyorsan uygun ismi yazman gerekir.
-
----
-
-## 📍 7. Logları Görüntülemek
-
-RTT kullanıyorsan:
-
-```bash
-west log
-```
-
-ya da SEGGER RTT Viewer gibi bir araçla logları canlı görebilirsin.
-
----
 
