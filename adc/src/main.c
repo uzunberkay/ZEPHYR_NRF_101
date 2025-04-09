@@ -5,9 +5,9 @@
  #include <zephyr/drivers/adc.h>
  
 
- static const struct adc_dt_spec adc_channel = ADC_DT_SPEC_GET(DT_PATH(zephyr_user));
+static const struct adc_dt_spec adc_channel = ADC_DT_SPEC_GET(DT_PATH(zephyr_user));
  
- LOG_MODULE_REGISTER(adc, LOG_LEVEL_DBG);
+LOG_MODULE_REGISTER(adc, LOG_LEVEL_DBG);
 
 int readAdcValue(struct adc_dt_spec* adc_channel,struct adc_sequence* sequence);
  
