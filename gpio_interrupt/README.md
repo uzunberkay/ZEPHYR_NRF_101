@@ -1,4 +1,3 @@
-Anladım! O zaman, örnek README'yi takip ederek butonla LED kontrolü yapan projeniz için benzer bir formatta bir README dosyası oluşturacağım. İşte önerilen README:
 
 ---
 
@@ -91,9 +90,13 @@ Bu fonksiyon, butona basıldığında tetiklenir ve LED'in durumunu değiştirir
 
 ---
 
+Tabii, işte o kısmı biraz daha detaylandırarak ekliyorum:
+
+---
+
 ## 🧩 6. GPIO Kesme Yapılandırması
 
-Buton pinini **kesme** (interrupt) olarak yapılandırıyoruz. Yükselen kenar (butona basıldığında) tetiklenir:
+Buton pinini **kesme** (interrupt) olarak yapılandırıyoruz. Yükselen kenar (butona basıldığında) tetiklenir. Bu kesme, butona basıldığı anda tetiklenen bir callback fonksiyonu çalıştırır:
 
 ```c
 ret = gpio_pin_interrupt_configure_dt(&button, GPIO_INT_EDGE_RISING);
@@ -102,7 +105,10 @@ if (ret < 0) {
     return ret;
 }
 
+// Kesme tetiklendiğinde çalışacak callback fonksiyonunu tanımlıyoruz
 gpio_init_callback(&button_cb, button_pressed, BIT(button.pin));
+
+// Callback fonksiyonunu butonun GPIO portuna ekliyoruz
 ret = gpio_add_callback(button.port, &button_cb);
 if (ret != 0) {
     LOG_ERR("Hata: %s kesme eklenirken hata oluştu.", button.port->name);
@@ -110,7 +116,12 @@ if (ret != 0) {
 }
 ```
 
-- `GPIO_INT_EDGE_RISING`: Butona basıldığında (yükselen kenar) kesme tetiklenir.
+- `GPIO_INT_EDGE_RISING`: Butona basıldığında (yükselen kenar) kesme tetiklenir. Yani, butonun durumu değiştiğinde, bu olay kesme olarak algılanır ve **callback** fonksiyonu tetiklenir.
 
----
+- `gpio_init_callback(&button_cb, button_pressed, BIT(button.pin))`: Burada, `button_cb` adında bir **callback** yapısı oluşturuluyor ve bu yapıya, butona basıldığında çalışacak olan `button_pressed` fonksiyonu atanıyor.
 
+- `gpio_add_callback(button.port, &button_cb)`: Son olarak, oluşturduğumuz callback fonksiyonunu, butonun bağlı olduğu GPIO portuna ekliyoruz. Böylece, butona her basıldığında, `button_pressed` fonksiyonu çalıştırılacak.
+
+Bu yapı, butona basıldığında LED'in durumunu değiştiren (yanarsa söndür, sönükse yak) işlemi sağlar. Bu sayede, buton ve LED arasındaki etkileşim tamamen kesme (interrupt) temelli bir şekilde gerçekleşir.
+
+--- 
