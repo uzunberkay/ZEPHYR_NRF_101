@@ -1,0 +1,3 @@
+[submodule "gpio_interrupt"]
+	path = gpio_interrupt
+	url = https://github.com/uzunberkay/ZEPHYR_NRF_101.git
