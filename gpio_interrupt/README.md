@@ -90,7 +90,7 @@ Bu fonksiyon, butona basıldığında tetiklenir ve LED'in durumunu değiştirir
 
 ---
 
-Tabii, işte o kısmı biraz daha detaylandırarak ekliyorum:
+
 
 ---
 
