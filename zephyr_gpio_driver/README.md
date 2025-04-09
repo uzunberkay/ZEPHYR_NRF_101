@@ -4,7 +4,7 @@
 # GPIO Driver
 
 Bu driver, Zephyr RTOS üzerinde GPIO pinlerinin temel yapılandırma ve interrupt işlevselliğini sağlamak amacıyla geliştirilmiştir. Kullanıcıların, cihazlarının GPIO pinlerini giriş/çıkış olarak yapılandırmasına, ayrıca GPIO interrupt işlevselliklerini etkinleştirmesine olanak tanır.
-
+---
 ### Yapılan İşlemler:
 
 - **GPIO Pin Yapılandırması**: GPIO pinlerinin temel yapılandırmalarını gerçekleştirir. Bu işlem, belirli bir GPIO pininin giriş ya da çıkış olarak yapılandırılması için kullanılır. 
