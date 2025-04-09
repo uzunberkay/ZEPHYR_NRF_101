@@ -43,7 +43,7 @@ const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
 ## 🧠 3. GPIO Cihazının Hazır Olduğunu Kontrol Etmek
 
-Buton ve LED bağlı oldukları GPIO pin'lerinin sistem tarafından tanınıp tanınmadığını kontrol ederiz:
+Buton ve LED bağlı oldukları GPIO pin'lerinin kullanıma hazır olup olmadığını kontrol ederiz:
 
 ```c
 if (!gpio_is_ready_dt(&led)) {
