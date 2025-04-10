@@ -1,3 +1,6 @@
 [submodule "zephyr_sys_init"]
 	path = zephyr_sys_init
 	url = https://github.com/uzunberkay/ZEPHYR_NRF_101.git
+[submodule "zephyr_sys_init/zephyr_sys_init"]
+	path = zephyr_sys_init/zephyr_sys_init
+	url = https://github.com/uzunberkay/ZEPHYR_NRF_101.git
