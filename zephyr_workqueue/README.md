@@ -72,4 +72,3 @@ void timer_handler(struct k_timer *dummy)
 
 ---
 
-Bu düzenlemeyle, proje daha çok **workqueue** odaklı olarak anlatıldı. **Timer** sadece **workqueue**'yi tetiklemek için kullanılan bir araç olarak açıklanmış oldu. Bu yapıyı diğer projelerde de uygulayabiliriz.
