@@ -1,16 +1,15 @@
 
-
 ---
 
-# ⚡ Zephyr Timer Projesi
+# ⚡ Zephyr Timer
 
-Bu proje, Zephyr RTOS üzerinde çalışan bir nRF52840 geliştirme kartı kullanarak bir LED'in her saniye yanıp sönmesini sağlayan basit bir timer uygulamasıdır. Zephyr'in zamanlayıcı (timer) fonksiyonları kullanılarak belirli bir zaman aralığında işlemler yapılabilir. Bu örnekte, timer her saniye tetiklenerek bir LED'in durumunu değiştirir.
+Bu proje, Zephyr RTOS üzerinde çalışan bir geliştirme kartı kullanarak bir LED'in her saniye yanıp sönmesini sağlayan basit bir timer uygulamasıdır. Zephyr'in zamanlayıcı (timer) fonksiyonları kullanılarak belirli bir zaman aralığında işlemler yapılabilir. Bu örnekte, timer her saniye tetiklenerek bir LED'in durumunu değiştirir.
 
 ## 🧾 1. prj.conf Dosyası
 
-Projede, zamanlayıcı fonksiyonlarının düzgün çalışabilmesi için `prj.conf` dosyasına ekstra bir şey eklenmesine gerek yoktur. Zephyr, zamanlayıcı desteğini varsayılan olarak sağlar. 
+Projede, zamanlayıcı fonksiyonlarının düzgün çalışabilmesi için `prj.conf` dosyasına ekstra bir şey eklenmesine gerek yoktur. Zephyr, zamanlayıcı desteğini varsayılan olarak sağlar.
 
-## 🗺️ 2. nrf52840dk_nrf52840.overlay Dosyası
+## 🗺️ 2. DeviceTree (Overlay) Dosyası
 
 Bu projede, timer kullanımı için özel bir yapılandırma veya DeviceTree (overlay) dosyasına ek bir şey yazılmasına gerek yoktur. Zamanlayıcılar, yazılım seviyesinde doğrudan Zephyr fonksiyonlarıyla yönetilir.
 
@@ -47,5 +46,5 @@ void timer_handler(struct k_timer *dummy)
 ## 📝 Notlar
 
 - **Zamanlayıcı**: Zamanlayıcı, Zephyr RTOS'un sunduğu yerleşik fonksiyonlarla kolayca yönetilebilir. `K_TIMER_DEFINE` ile tanımlanır, `k_timer_start` ile başlatılır ve her tetiklenme sonrası belirtilen handler fonksiyonu çalıştırılır.
+
 ---
-r.
