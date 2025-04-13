@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "log.h": "c",
+        "gpio_driver.h": "c"
+    }
+}
