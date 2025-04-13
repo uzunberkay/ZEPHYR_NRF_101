@@ -23,7 +23,7 @@ CONFIG_LOG=y
 
 ---
 
-## 🗺️ 2. `nrf52840dk_nrf52840.overlay` Dosyası
+## 🗺️ 2.  DeviceTree (Overlay) Dosyası
 
 Donanımın ADC yapılandırması `.overlay` dosyası üzerinden gerçekleştirilmiştir. Bu sayede ADC kanalı ve giriş pini device tree yapısı içinde tanımlanır.
 
