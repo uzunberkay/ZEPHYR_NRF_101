@@ -18,6 +18,7 @@ const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0),gpios);
 
 int gpio_init(const struct device* dev)
 {
+        ARG_UNUSED(dev);
         LOG_DBG("Gpio init işlemlerini burada yapiyoruz");
         return gpio_configure_basic(&led,GPIO_OUTPUT_ACTIVE);
 }

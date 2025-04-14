@@ -9,7 +9,7 @@ static const struct adc_dt_spec adc_channel = ADC_DT_SPEC_GET(DT_PATH(zephyr_use
  
 LOG_MODULE_REGISTER(adc, LOG_LEVEL_DBG);
 
-int readAdcValue(struct adc_dt_spec* adc_channel,struct adc_sequence* sequence);
+const int readAdcValue(const struct adc_dt_spec* adc_channel,const struct adc_sequence* sequence);
  
 int main(void)
 {
@@ -61,7 +61,7 @@ int main(void)
  * 
  * 
  */
- int readAdcValue(struct adc_dt_spec* adc_channel,struct adc_sequence* sequence)
+ const int readAdcValue(const struct adc_dt_spec* adc_channel,const struct adc_sequence* sequence)
 {
         if(adc_read(adc_channel->dev, sequence) < 0)
         {
@@ -69,7 +69,7 @@ int main(void)
                 return -1;
         }
         int16_t raw = *(int16_t*)sequence->buffer;
-        int mV = raw;
+        int32_t mV = (int32_t)raw;
         if(adc_raw_to_millivolts_dt(adc_channel, &mV) < 0)
         {
                 LOG_ERR("ADC cihazi (%s) mV donusturme hatasi", adc_channel->dev->name);

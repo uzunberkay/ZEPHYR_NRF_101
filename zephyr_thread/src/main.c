@@ -32,7 +32,7 @@ void thread1_func(void* vp1,void* vp2,void* vp3)
         {
                 gpio_pin_toggle_dt(&thread1_led);
                 LOG_DBG("Thread 1 LED toggle");
-                k_sleep(K_MSEC(500));
+                k_msleep(500);
         }
 }
 /*
@@ -59,7 +59,7 @@ void thread2_func(void* vp1,void* vp2,void* vp3)
         {
                 gpio_pin_toggle_dt(&thread2_led);
                 LOG_DBG("Thread 2 LED toggle");
-                k_sleep(K_MSEC(500));
+                k_msleep(500);
         }
 }
 
