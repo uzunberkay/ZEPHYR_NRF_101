@@ -6,7 +6,7 @@ Bu örnekte, **Zephyr RTOS** ve **nRF52840 kartı** kullanarak bir LED'i belirli
 
 ---
 
-## 🧾 1. `prj.conf` Dosyası ve Anlamı
+## 🧾 1. `prj.conf` (KConfig) Dosyası ve Anlamı
 
 `prj.conf` dosyası, Zephyr uygulamamızın yapılandırma ayarlarını içerir. Bu dosyada yapılan her değişiklik, derleme sırasında uygulamamızın özelliklerini aktive eder veya devre dışı bırakır. Bizim uygulamamızda temel olarak şu satırlara yer veriyoruz:
 

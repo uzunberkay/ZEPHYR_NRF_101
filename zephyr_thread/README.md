@@ -1,7 +1,7 @@
 
 ---
 
-## 🧵 Zephyr Thread 
+## ⚡ Zephyr Thread 
 
 **Zephyr RTOS** üzerinde birden fazla görev (task) aynı anda çalıştırmak için thread'ler kullanılır. Thread'ler, tek çekirdekli sistemlerde bile işlemciyi zaman dilimlerine bölerek farklı görevlerin paralel gibi çalışmasını sağlar. Bu örnekte, **Zephyr RTOS** üzerinde thread oluşturma ve kullanma süreci kısaca açıklanacaktır.
 

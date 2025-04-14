@@ -5,7 +5,7 @@
 
 Bu proje, Zephyr RTOS üzerinde çalışan bir geliştirme kartı kullanarak bir LED'in her saniye yanıp sönmesini sağlayan basit bir timer uygulamasıdır. Zephyr'in zamanlayıcı (timer) fonksiyonları kullanılarak belirli bir zaman aralığında işlemler yapılabilir. Bu örnekte, timer her saniye tetiklenerek bir LED'in durumunu değiştirir.
 
-## 🧾 1. prj.conf Dosyası
+## 🧾 1. prj.conf (KConfig) Dosyası
 
 Projede, zamanlayıcı fonksiyonlarının düzgün çalışabilmesi için `prj.conf` dosyasına ekstra bir şey eklenmesine gerek yoktur. Zephyr, zamanlayıcı desteğini varsayılan olarak sağlar.
 

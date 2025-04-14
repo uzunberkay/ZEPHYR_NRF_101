@@ -1,7 +1,7 @@
 
 ---
 
-# 🟢 Zephyr SYS_INIT 
+# ⚡ Zephyr SYS_INIT 
 
 **`SYS_INIT`** makrosu, Zephyr'de **sistem başlatma** (system initialization) sırasında bir fonksiyonu çağırmak için kullanılır. Bu fonksiyon, belirli bir **öncelik** ile uygulama başlatılmadan önce veya uygulama başlatılırken bir kez çalıştırılmak üzere ayarlanabilir. Bu, özellikle donanım başlatma veya düşük seviyeli konfigürasyon işlemleri için kullanışlıdır.
 

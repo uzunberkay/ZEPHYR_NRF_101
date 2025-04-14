@@ -7,7 +7,7 @@ Bu projede **Zephyr RTOS** üzerinde çalışan bir **nRF52840** geliştirme kar
 
 ---
 
-## 🧾 1. `prj.conf` Dosyası
+## 🧾 1. `prj.conf`(KConfig) Dosyası
 
 Proje yapılandırma dosyasında ADC ve loglama altyapısı aktif edilmiştir:
 

@@ -1,7 +1,7 @@
 
 ---
 
-# 🟢 Zephyr Semaphore 
+# ⚡ Zephyr Semaphore 
 
 ## Semaphore Nedir ? 
 

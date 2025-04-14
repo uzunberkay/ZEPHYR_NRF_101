@@ -4,6 +4,7 @@
 # ⚡ Zephyr Workqueue 
 
 ## 🔄 WorkQueue Nedir?
+
 Zephyr RTOS’ta **workqueue**, zaman alan veya ertelenmiş işlemleri thread dışında arka planda çalıştırmak için kullanılan bir yapıdır. Bu sistem sayesinde zamanlayıcı gibi kesme tabanlı olaylar içinde doğrudan uzun işlemler yapılmaz, onun yerine bu işlemler bir work objesi olarak **kuyruğa alınır** ve uygun zamanda çalıştırılır.
 
 Bu projede **Zephyr RTOS** üzerinde bir **workqueue** kullanarak, zamanlayıcı tetiklemeleriyle LED'in düzenli aralıklarla yanıp sönmesini sağlıyoruz. Timer her tetiklendiğinde, bir **work** (iş) **workqueue**'ye ekleniyor ve arka planda LED'in durumu güncelleniyor. Bu sayede, LED'in blink işlemi, interrupt servis rutininde (ISR) doğrudan yapılmak yerine güvenli bir şekilde workqueue kullanılarak işleniyor. Böylece sistemin ana işleyişi bozulmadan zaman uyumsuz işlemler arka planda **yürütülebilir** hale geliyor.
