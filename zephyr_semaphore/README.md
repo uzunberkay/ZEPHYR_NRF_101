@@ -3,9 +3,19 @@
 
 # 🟢 Zephyr Semaphore Kullanımı
 
+## Semaphore Nedir ? 
+
+Semaphore, iş parçacıkları arasında senkronizasyon sağlamak için kullanılan bir mekanizmadır. Zephyr'de, **k_sem_give()** semaforu "verirken", **k_sem_take()** semaforu bekler. Bu, kesintili işlemlerle (ISR veya zamanlayıcılar gibi) güvenli bir zamanlama yapmayı sağlar.
+
+Neden Kullanılır?
+
+- Zamanlama kontrolü sağlar.
+- İş parçacıkları arasındaki iletişimi senkronize eder.
+- Race condition gibi hataları önler.
+
 Bu projede **Zephyr RTOS** üzerinde bir **semafor (semaphore)** kullanarak, bir **timer callback** fonksiyonunun bir **thread**'i tetiklemesini sağlıyoruz. Timer her tetiklendiğinde semafor "veriliyor" ve thread bu sinyali alarak LED'in durumunu değiştiriyor. Bu yapı, **asenkron** olayları senkron şekilde ve **güvenli bir zamanlamayla** yönetmek için ideal bir yöntem sunar.
 
-## 🧾 1. prj.conf Dosyası
+## 🧾 1. prj.conf (KConfig) Dosyası
 
 Bu örnekte, `prj.conf` dosyasına ek bir şey yazılmasına gerek yoktur. Zephyr, **k_sem** (kernel semaphore) desteğini varsayılan olarak sağlar.
 
@@ -55,13 +65,6 @@ void sample_thread(void* vp1, void* vp2, void* vp3)
 - `K_FOREVER`: Sonsuza kadar bekler.
 - Semafor "verildiğinde", thread çalışır ve LED'in durumunu değiştirir.
 
-## 📝 Notlar
 
-- **Semaphore**: Bir **senkronizasyon** mekanizmasıdır. Thread’lerin veya callback fonksiyonlarının **zamanlama ve sıralama kontrolünü** sağlar.
-- **Neden Kullanılır?**:
-  - ISR (interrupt) içinde uzun işlemler yapılmaz.
-  - ISR içinden thread tetiklemek için **k_sem_give()** kullanılır.
-  - Thread bu sinyali alana kadar bekler ve işleyiş daha kararlı hale gelir.
-- **Bu projede**: Timer her saniye çalışır, semafor verir. Thread bu sinyali alarak LED'in durumunu değiştirir.
 
 ---
