@@ -23,7 +23,7 @@ Bu örnekte, `prj.conf` dosyasına ek bir şey yazılmasına gerek yoktur. Zephy
 
 Bu projede, **semaphore** için özel bir yapılandırma veya DeviceTree (overlay) dosyasına ek bir şey yazılmasına gerek yoktur
 
-## 🧵 3. Semaphore Kullanımı
+## 📌 3. Semaphore Kullanımı
 
 ### 📌 Semafor Tanımlama
 
