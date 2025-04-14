@@ -1,7 +1,7 @@
 
 ---
 
-## 🔘 Button Controlled LED 
+## ⚡Zephyr Interrupt  
 
 Bu örnekte, **Zephyr RTOS** ve **nRF52840 kartı** kullanarak bir **buton** ile kontrol edilen **LED**'i yapılandıracağız. Butona her basıldığında, LED'in durumu değişir (yanıyorsa söner, sönükse yanar). 
 

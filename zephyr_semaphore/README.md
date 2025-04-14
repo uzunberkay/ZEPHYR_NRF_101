@@ -1,7 +1,7 @@
 
 ---
 
-# 🟢 Zephyr Semaphore Kullanımı
+# 🟢 Zephyr Semaphore 
 
 ## Semaphore Nedir ? 
 

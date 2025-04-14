@@ -1,6 +1,6 @@
 ---
 
-## 🔦 LED Blink 
+## ⚡Zephyr LED Blink 
 
 Bu örnekte, **Zephyr RTOS** ve **nRF52840 kartı** kullanarak bir LED'i belirli aralıklarla yakıp söndüreceğiz. Örnek uygulamamızda **Device Tree**, **GPIO sürücüleri**, **konfigürasyon dosyaları** ve **loglama sistemi** gibi Zephyr bileşenleri kullanılacaktır.
 
