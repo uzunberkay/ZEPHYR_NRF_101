@@ -20,10 +20,14 @@ K_SEM_DEFINE(sample_sem,0,1);
 void timer_cb(struct k_timer* dummy);
 void sample_thread(void* vp1,void *vp2, void* vp3);
 
-
+K_TIMER_DEFINE(sample_timer,timer_cb,NULL);
+K_THREAD_DEFINE(sample_thread_id,SAMPLE_THREAD_STACK_SIZE,sample_thread,NULL,NULL,NULL,
+        SAMPLE_THREAD_PRIO,0,0);
+        
 int system_init(struct device* dev)
 {
         ARG_UNUSED(dev);
+        k_timer_start(&sample_timer, K_MSEC(1000), K_MSEC(1000));
         gpio_configure_basic(&led,GPIO_OUTPUT_ACTIVE);
    
         return 0;
@@ -31,9 +35,7 @@ int system_init(struct device* dev)
 
 
 SYS_INIT(system_init,APPLICATION,SYSTEM_INIT_PRIO);
-K_TIMER_DEFINE(sample_timer,timer_cb,NULL);
-K_THREAD_DEFINE(sample_thread_id,SAMPLE_THREAD_STACK_SIZE,sample_thread,NULL,NULL,NULL,
-        SAMPLE_THREAD_PRIO,0,0);
+
 
 void timer_cb(struct k_timer* dummy)
 {
