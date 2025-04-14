@@ -1,7 +1,7 @@
 
 ---
 
-## ⚡Zephyr ADC (Analog to Digital Converter)
+## ⚡Zephyr ADC 
 
 Bu projede **Zephyr RTOS** üzerinde çalışan bir **nRF52840** geliştirme kartı kullanılarak analog sinyallerin dijital verilere dönüştürülmesi gösterilmektedir. ADC modülü, belirli bir analog pini örnekleyerek milivolt cinsinden veri sağlar. Bu sayede sensörlerden ya da dış dünyadan gelen analog sinyaller yazılım tarafından işlenebilir hale gelir.
 
